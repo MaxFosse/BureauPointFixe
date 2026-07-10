@@ -337,13 +337,13 @@ collections:
                     widget: text
 
   # ══════════════════════════════════════════
-  #  FOOTER (réseaux sociaux uniquement)
+  #  RÉSEAUX SOCIAUX
   # ══════════════════════════════════════════
   - name: footer
-    label: "🔗 Footer - Réseaux sociaux"
+    label: "🔗 Réseaux sociaux"
     files:
       - name: footer
-        label: "Liens sociaux du footer"
+        label: "Réseaux sociaux"
         file: content/footer.json
         fields:
 
@@ -354,7 +354,7 @@ collections:
             allow_delete: true
             label_singular: Réseau
             summary: "{{fields.label}}"
-            hint: "⚠️ Seule cette liste est modifiable dans le footer (le reste du footer, la navbar, le nom 'Bureau Point Fixe' et les boutons 'Discuss a mandate' ne sont pas gérés ici)."
+            hint: "Ce sont les réseaux sociaux qui s'affichent en bas de l'écran."
             fields:
               - name: label
                 label: "Nom affiché (ex : LinkedIn)"
