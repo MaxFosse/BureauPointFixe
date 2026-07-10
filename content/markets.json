@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "label": "Markets",
+    "h1": "Complex markets require more than sector knowledge.",
+    "lead": "One territory, not a list of verticals. The common thread is the need to reconcile long-cycle markets with urgent operational outcomes."
+  },
+  "territory": "Bureau Point Fixe operates in one territory: markets where technology, regulation, sovereignty, industrial structure and customer missions shape every strategic decision. The common thread is not a single vertical. It is the need to reconcile long-cycle markets with urgent operational outcomes.",
+  "items": [
+    { "h3": "Defence & national security", "p": "Portfolio, market and growth decisions across defence systems, command and control, ISR, geospatial intelligence, communications and software-led capabilities." },
+    { "h3": "Public safety & mission-critical communications", "p": "Strategy and offer development for public protection, emergency response, secure communications and mission-critical digital services." },
+    { "h3": "Critical infrastructure", "p": "Growth, product and partnership strategy for transport, energy, airports, utilities and other regulated operational environments." },
+    { "h3": "Sovereign & dual-use technology", "p": "Market access and strategic development for technologies where control, resilience, data, supply chains and national capability matter, including space-enabled services, geospatial platforms, digital identity and sensing." }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "label": "About",
+    "h1": "Strategy with an operator’s bias.",
+    "lead": "An independent, founder-led practice. Deliberately small. Built to decide and then execute."
+  },
+  "copy": {
+    "p1": "Bureau Point Fixe is an independent advisory and execution practice for defence, security and sovereign technology. It is founder-led: the work is done by its principal, who has spent a career inside large industrial groups, software-led platforms and mission-critical systems, leading strategy, product, business development, sales and transformation across international institutional markets.",
+    "p2": "The practice is at its best when the problem is ambiguous, the stakes are high and the organisation needs someone who can connect strategy, product, customers, partners and execution. The approach is direct: understand the mission, find the leverage points, align the team and move.",
+    "signature": "Our purpose is simple: move organisations from fragmented opportunities to scalable growth."
+  },
+  "aside": {
+    "kicker": "The practice",
+    "line1": "Independent. Founder-led.",
+    "line2": "Deliberately small.",
+    "small1": "Senior work is done personally; a vetted partner network is brought in when a mandate needs scale.",
+    "small2": "The principal’s full background and track record are shared directly and confidentially once a conversation begins."
+  },
+  "evidence": {
+    "label": "Operating evidence",
+    "h2": "Senior perspective. Measurable movement.",
+    "items": [
+      { "strong": "Multi-year growth architecture", "p": "Shaped for a mission-critical portfolio and approved at group level." },
+      { "strong": "Product organisation scaled", "p": "Investment governance established around a large R&D portfolio." },
+      { "strong": "Productised repositioning", "p": "From a project-led business towards a productised software and services model." },
+      { "strong": "International market access", "p": "Market access, partnerships and acquisitions built across institutional markets." }
+    ],
+    "note": "Examples are illustrative and finalised only after validation. No client, programme or figure is published without explicit approval."
+  },
+  "governance": {
+    "label": "Governance & compliance",
+    "h2": "Credibility without overclaiming.",
+    "standing_label": "REGULATORY STANDING",
+    "standing_title": "CNAPS management approval held",
+    "standing_valid": "Valid until 16 June 2031.",
+    "p1": "Bureau Point Fixe is led by a holder of a valid management approval issued by the French National Council for Private Security Activities (CNAPS) for a training organisation operating in the private-security sector.",
+    "p2": "This individual approval is limited to the regulated capacity described above. It does not constitute approval, certification, recommendation or endorsement of Bureau Point Fixe, its advisory services or its clients by CNAPS."
+  }
+}

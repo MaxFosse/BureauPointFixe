@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "label": "Capabilities",
+    "h1": "Capabilities built around the decisions that matter.",
+    "lead": "Bureau Point Fixe brings market, product, commercial and operating judgement to one job: turning strategic intent into a plan that can actually be executed."
+  },
+  "items": [
+    {
+      "h2": "Growth strategy & market architecture",
+      "promise": "Choose where to play, how to enter, and what has to be true to win.",
+      "body": "We build evidence-led growth theses for complex and regulated markets. The work connects market attractiveness, customer missions, competitive reality, routes to market, partnership structures and the economics needed to execute.",
+      "scope": "Market prioritisation / market-entry strategy / growth thesis and strategic plan / localisation and partnership model / commercial and strategic diligence / business-case assessment"
+    },
+    {
+      "h2": "Product, offer & portfolio",
+      "promise": "Turn technical capability into an offer the market can buy.",
+      "body": "We help leadership teams make the choices that portfolios tend to avoid: what to lead with, what to stop, where to invest, how to package the offer, and how to align product ambition with customer value and commercial reality.",
+      "scope": "Value proposition / product-market alignment / portfolio rationalisation / software and services strategy / roadmap governance / investment priorities / offer architecture"
+    },
+    {
+      "h2": "Market access & strategic capture",
+      "promise": "Build a repeatable path from opportunity to qualified, winnable business.",
+      "body": "We structure the customer, partner and capture system needed to compete in institutional and high-stakes markets. The aim is not more activity. It is better access, sharper qualification and a credible path to win.",
+      "scope": "Strategic accounts / capture planning / partner ecosystem / routes to market / bid-no-bid discipline / pipeline quality / executive engagement / localisation"
+    },
+    {
+      "h2": "Execution & interim leadership",
+      "promise": "Stay to run it: move from recommendation to accountable delivery.",
+      "body": "When an organisation needs more than advice, Bureau Point Fixe can operate alongside the leadership team or take an embedded mandate. The focus is clear priorities, accountable governance and visible movement.",
+      "scope": "Operating model / product and portfolio governance / commercial transformation / P&L recovery / management transition / executive programme leadership"
+    }
+  ],
+  "formats": {
+    "label": "How we engage",
+    "h2": "The format follows the problem, not the other way around.",
+    "items": [
+      { "h3": "Strategic sprint", "p": "A focused diagnosis and decision pack for one growth, portfolio or market question." },
+      { "h3": "Advisory mandate", "p": "Ongoing counsel to a CEO, business leader, founder or board through a critical run of decisions." },
+      { "h3": "Embedded leadership", "p": "Interim or transformation leadership when the work needs an owner, not an adviser." }
+    ]
+  }
+}

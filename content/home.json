@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "label": "Independent strategy & execution",
+    "h1": "Strategy and execution for defence, security and sovereign technology.",
+    "lead": "An independent, founder-led practice for leaders in complex regulated markets, where the job is to make the strategic call and then carry it through.",
+    "cta_secondary": "See how we work",
+    "aside_label": "A fixed point in complex markets.",
+    "aside_lines": [
+      { "line": "Where to play." },
+      { "line": "What to sell." },
+      { "line": "How to win." },
+      { "line": "Who executes." }
+    ]
+  },
+  "tensions": {
+    "label": "Where we work",
+    "h2": "The hardest growth problems are rarely confined to one function.",
+    "intro": "Bureau Point Fixe works at the points of friction where a decision has to be made and then executed.",
+    "items": [
+      { "line1": "Strong technology.", "line2": "Weak market access." },
+      { "line1": "Real demand.", "line2": "An offer that still has to change." },
+      { "line1": "A fragmented portfolio.", "line2": "No clear investment logic." },
+      { "line1": "A credible strategy.", "line2": "No one accountable for execution." }
+    ],
+    "teaser": "We connect four decisions that are too often handled separately: where to play, what to sell, how to reach institutional buyers, and who executes."
+  }
+}

@@ -1,0 +1,491 @@
+# ════════════════════════════════════════════════════════
+#  BUREAU POINT FIXE (Configuration Sveltia CMS)
+#  Acces : https://votre-site.fr/admin/
+# ════════════════════════════════════════════════════════
+
+backend:
+  name: github
+  repo: MaxFosse/BureauPointFixe # ⚠️ a confirmer / remplacer par le vrai depot GitHub
+  branch: main
+  auth_type: token
+
+media_folder: assets
+public_folder: assets
+
+locale: fr
+
+collections:
+
+  # ══════════════════════════════════════════
+  #  HOME
+  # ══════════════════════════════════════════
+  - name: home
+    label: "🏠 Home"
+    files:
+      - name: home
+        label: "Page d'accueil"
+        file: content/home.json
+        fields:
+
+          - name: hero
+            label: "Premier écran (hero)"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+                hint: "Texte discret affiché au-dessus du grand titre."
+              - name: h1
+                label: "Titre principal"
+                widget: string
+                hint: "Le grand titre de la page d'accueil."
+              - name: lead
+                label: "Texte d'accroche"
+                widget: text
+                hint: "Paragraphe affiché sous le grand titre."
+              - name: cta_secondary
+                label: "Texte du bouton secondaire"
+                widget: string
+                hint: "Le bouton principal 'Discuss a mandate' n'est pas modifiable ici. Ceci est le second bouton, à côté."
+              - name: aside_label
+                label: "Titre de l'encart 'point fixe'"
+                widget: string
+                hint: "Texte affiché au-dessus de la liste, à côté du grand titre."
+              - name: aside_lines
+                label: "Lignes de l'encart"
+                widget: list
+                allow_add: false
+                allow_delete: false
+                label_singular: Ligne
+                summary: "{{fields.line}}"
+                hint: "Les 4 lignes affichées dans l'encart (Where to play / What to sell / How to win / Who executes)."
+                fields:
+                  - name: line
+                    label: "Texte de la ligne"
+                    widget: string
+
+          - name: tensions
+            label: "Section 'Where we work'"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h2
+                label: "Titre de la section"
+                widget: string
+              - name: intro
+                label: "Texte d'introduction"
+                widget: text
+              - name: items
+                label: "Les 4 tensions"
+                widget: list
+                allow_add: false
+                allow_delete: false
+                label_singular: Tension
+                summary: "{{fields.line1}}"
+                hint: "Vous pouvez modifier le texte de chaque carte, mais pas en ajouter ou en supprimer (la mise en page est prévue pour 4)."
+                fields:
+                  - name: line1
+                    label: "Première ligne"
+                    widget: string
+                  - name: line2
+                    label: "Deuxième ligne"
+                    widget: string
+              - name: teaser
+                label: "Phrase de transition vers Capabilities"
+                widget: text
+
+  # ══════════════════════════════════════════
+  #  CAPABILITIES
+  # ══════════════════════════════════════════
+  - name: capabilities
+    label: "⚙️ Capabilities"
+    files:
+      - name: capabilities
+        label: "Page Capabilities"
+        file: content/capabilities.json
+        fields:
+
+          - name: hero
+            label: "En-tête de la page"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h1
+                label: "Titre principal"
+                widget: string
+              - name: lead
+                label: "Texte d'accroche"
+                widget: text
+
+          - name: items
+            label: "Les 4 capacités"
+            widget: list
+            allow_add: false
+            allow_delete: false
+            label_singular: Capacité
+            summary: "{{fields.h2}}"
+            hint: "Le numéro (01-04) est automatique. Vous pouvez modifier le texte de chaque capacité, mais pas en ajouter ou en supprimer."
+            fields:
+              - name: h2
+                label: "Titre de la capacité"
+                widget: string
+              - name: promise
+                label: "Phrase d'accroche (en italique)"
+                widget: text
+              - name: body
+                label: "Texte descriptif"
+                widget: text
+              - name: scope
+                label: "Liste des prestations (séparées par des ' / ')"
+                widget: text
+                hint: "Chaque élément est séparé par une barre oblique, ex : Élément un / Élément deux / Élément trois"
+
+          - name: formats
+            label: "Section 'How we engage'"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h2
+                label: "Titre de la section"
+                widget: string
+              - name: items
+                label: "Les 3 formats d'engagement"
+                widget: list
+                allow_add: false
+                allow_delete: false
+                label_singular: Format
+                summary: "{{fields.h3}}"
+                fields:
+                  - name: h3
+                    label: "Nom du format"
+                    widget: string
+                  - name: p
+                    label: "Description"
+                    widget: text
+
+  # ══════════════════════════════════════════
+  #  MARKETS
+  # ══════════════════════════════════════════
+  - name: markets
+    label: "🌍 Markets"
+    files:
+      - name: markets
+        label: "Page Markets"
+        file: content/markets.json
+        fields:
+
+          - name: hero
+            label: "En-tête de la page"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h1
+                label: "Titre principal"
+                widget: string
+              - name: lead
+                label: "Texte d'accroche"
+                widget: text
+
+          - name: territory
+            label: "Paragraphe 'territoire' (encart blanc)"
+            widget: text
+
+          - name: items
+            label: "Les 4 marchés"
+            widget: list
+            allow_add: false
+            allow_delete: false
+            label_singular: Marché
+            summary: "{{fields.h3}}"
+            hint: "Le numéro (01-04) est automatique. Vous pouvez modifier le texte de chaque marché, mais pas en ajouter ou en supprimer."
+            fields:
+              - name: h3
+                label: "Nom du marché"
+                widget: string
+              - name: p
+                label: "Description"
+                widget: text
+
+  # ══════════════════════════════════════════
+  #  ABOUT
+  # ══════════════════════════════════════════
+  - name: about
+    label: "🧭 About"
+    files:
+      - name: about
+        label: "Page About"
+        file: content/about.json
+        fields:
+
+          - name: hero
+            label: "En-tête de la page"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h1
+                label: "Titre principal"
+                widget: string
+              - name: lead
+                label: "Texte d'accroche"
+                widget: text
+
+          - name: copy
+            label: "Texte de présentation"
+            widget: object
+            fields:
+              - name: p1
+                label: "Premier paragraphe"
+                widget: text
+              - name: p2
+                label: "Deuxième paragraphe"
+                widget: text
+              - name: signature
+                label: "Phrase de signature (mise en avant)"
+                widget: text
+
+          - name: aside
+            label: "Encart latéral 'The practice'"
+            widget: object
+            fields:
+              - name: kicker
+                label: "Titre de l'encart"
+                widget: string
+              - name: line1
+                label: "Première ligne (en gras)"
+                widget: string
+              - name: line2
+                label: "Deuxième ligne (en gras)"
+                widget: string
+              - name: small1
+                label: "Premier petit texte"
+                widget: text
+              - name: small2
+                label: "Deuxième petit texte"
+                widget: text
+
+          - name: evidence
+            label: "Section 'Operating evidence'"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h2
+                label: "Titre de la section"
+                widget: string
+              - name: items
+                label: "Les 4 preuves"
+                widget: list
+                allow_add: false
+                allow_delete: false
+                label_singular: Preuve
+                summary: "{{fields.strong}}"
+                fields:
+                  - name: strong
+                    label: "Titre (en gras)"
+                    widget: string
+                  - name: p
+                    label: "Description"
+                    widget: text
+              - name: note
+                label: "Note de bas de section"
+                widget: text
+
+          - name: governance
+            label: "Section 'Governance & compliance'"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h2
+                label: "Titre de la section"
+                widget: string
+              - name: standing_label
+                label: "Étiquette (ex : REGULATORY STANDING)"
+                widget: string
+              - name: standing_title
+                label: "Titre de l'agrément"
+                widget: string
+              - name: standing_valid
+                label: "Date de validité"
+                widget: string
+              - name: p1
+                label: "Premier paragraphe"
+                widget: text
+              - name: p2
+                label: "Deuxième paragraphe"
+                widget: text
+
+  # ══════════════════════════════════════════
+  #  CONTACT
+  # ══════════════════════════════════════════
+  - name: contact
+    label: "📩 Contact"
+    files:
+      - name: contact
+        label: "Page Contact"
+        file: content/contact.json
+        fields:
+
+          - name: hero
+            label: "En-tête de la page"
+            widget: object
+            fields:
+              - name: label
+                label: "Petite ligne au-dessus du titre"
+                widget: string
+              - name: h1
+                label: "Titre principal"
+                widget: string
+
+          - name: lead
+            label: "Texte d'accroche"
+            widget: text
+
+          - name: form
+            label: "Formulaire"
+            widget: object
+            hint: "⚠️ Les libellés du formulaire uniquement. Le comportement du formulaire n'est pas modifiable ici."
+            fields:
+              - name: label_name
+                label: "Libellé champ Nom"
+                widget: string
+              - name: label_email
+                label: "Libellé champ Email"
+                widget: string
+              - name: label_org
+                label: "Libellé champ Organisation"
+                widget: string
+              - name: label_message
+                label: "Libellé champ Message"
+                widget: string
+              - name: note
+                label: "Note sous le champ message"
+                widget: text
+              - name: label_phone
+                label: "Libellé champ Téléphone"
+                widget: string
+              - name: submit
+                label: "Texte du bouton d'envoi"
+                widget: string
+
+          - name: aside
+            label: "Encart latéral"
+            widget: object
+            fields:
+              - name: label1
+                label: "Titre 'Prefer email ?'"
+                widget: string
+              - name: label2
+                label: "Titre 'Discretion'"
+                widget: string
+              - name: discretion
+                label: "Texte sous 'Discretion'"
+                widget: text
+
+          - name: email
+            label: "Adresse email de contact"
+            widget: string
+            hint: "Utilisée dans l'encart Contact et dans les pages légales."
+
+  # ══════════════════════════════════════════
+  #  FOOTER (réseaux sociaux uniquement)
+  # ══════════════════════════════════════════
+  - name: footer
+    label: "🔗 Footer - Réseaux sociaux"
+    files:
+      - name: footer
+        label: "Liens sociaux du footer"
+        file: content/footer.json
+        fields:
+
+          - name: socials
+            label: "Réseaux sociaux"
+            widget: list
+            allow_add: true
+            allow_delete: true
+            label_singular: Réseau
+            summary: "{{fields.label}}"
+            hint: "⚠️ Seule cette liste est modifiable dans le footer (le reste du footer, la navbar, le nom 'Bureau Point Fixe' et les boutons 'Discuss a mandate' ne sont pas gérés ici)."
+            fields:
+              - name: label
+                label: "Nom affiché (ex : LinkedIn)"
+                widget: string
+              - name: url
+                label: "Lien du réseau"
+                widget: string
+
+  # ══════════════════════════════════════════
+  #  LEGAL NOTICE
+  # ══════════════════════════════════════════
+  - name: legal
+    label: "⚖️ Legal Notice"
+    files:
+      - name: legal
+        label: "Mentions légales"
+        file: content/legal.json
+        fields:
+
+          - name: title
+            label: "Titre de la page"
+            widget: string
+
+          - name: sections
+            label: "Sections"
+            widget: list
+            allow_add: false
+            allow_delete: false
+            label_singular: Section
+            summary: "{{fields.heading}}"
+            hint: "⚠️ La section 'Personal Data' en bas de page n'est pas modifiable ici (elle contient un lien technique vers la page Privacy Notice)."
+            fields:
+              - name: heading
+                label: "Titre de la section"
+                widget: string
+              - name: body
+                label: "Texte de la section"
+                widget: text
+                hint: "Pour un saut de paragraphe, laissez une ligne vide entre deux paragraphes."
+
+  # ══════════════════════════════════════════
+  #  PRIVACY NOTICE
+  # ══════════════════════════════════════════
+  - name: privacy
+    label: "🔒 Privacy Notice"
+    files:
+      - name: privacy
+        label: "Politique de confidentialité"
+        file: content/privacy.json
+        fields:
+
+          - name: title
+            label: "Titre de la page"
+            widget: string
+
+          - name: sections
+            label: "Sections"
+            widget: list
+            allow_add: false
+            allow_delete: false
+            label_singular: Section
+            summary: "{{fields.heading}}"
+            hint: "L'email de contact est ajouté automatiquement dans la première et la dernière section."
+            fields:
+              - name: heading
+                label: "Titre de la section"
+                widget: string
+              - name: body
+                label: "Texte de la section"
+                widget: text
+                hint: "Pour un saut de paragraphe, laissez une ligne vide entre deux paragraphes."

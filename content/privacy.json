@@ -1,0 +1,37 @@
+{
+  "title": "Privacy Notice",
+  "sections": [
+    {
+      "heading": "Data Controller",
+      "body": "Bureau Point Fixe is the data controller for the personal data collected through this website."
+    },
+    {
+      "heading": "What We Collect",
+      "body": "When you use the contact form, we collect the information you provide: name, work email, organisation (optional), your message, and phone number (optional)."
+    },
+    {
+      "heading": "Why We Collect It",
+      "body": "Your information is used only to assess and respond to your enquiry and to manage any related pre-contractual exchange. It is not used for marketing purposes."
+    },
+    {
+      "heading": "Legal Basis",
+      "body": "Processing is based on our legitimate interest in responding to enquiries and, where relevant, on steps taken at your request prior to entering into a contract (GDPR Article 6)."
+    },
+    {
+      "heading": "Retention",
+      "body": "Enquiry data is kept only for as long as necessary to handle the enquiry and any resulting engagement. [Exact retention period to be confirmed.]"
+    },
+    {
+      "heading": "Recipients",
+      "body": "Your data is accessed only by Bureau Point Fixe. It is not sold or shared with third parties for marketing purposes. [Any form-processing or hosting sub-processor to be listed here once confirmed.]"
+    },
+    {
+      "heading": "Cookies",
+      "body": "This website does not use analytics or third-party tracking cookies."
+    },
+    {
+      "heading": "Your Rights",
+      "body": "Under the GDPR, you have the right to access, rectify, erase and object to the processing of your personal data, and the right to data portability.\n\nPlease do not send classified information or special-category personal data through the contact form."
+    }
+  ]
+}

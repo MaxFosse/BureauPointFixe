@@ -1,0 +1,21 @@
+{
+  "title": "Legal Notice",
+  "sections": [
+    {
+      "heading": "Website Publisher",
+      "body": "This website is published by Bureau Point Fixe, an independent strategy and execution practice for defence, security and sovereign technology.\n\n[Legal entity name, registration number (SIREN/SIRET) and registered address to be confirmed.]"
+    },
+    {
+      "heading": "Hosting",
+      "body": "This website is hosted by:\n\nVercel Inc.\n440 N Barranca Ave PMB 4133, Covina, CA 91723-1722, United States\nvercel.com"
+    },
+    {
+      "heading": "Intellectual Property",
+      "body": "All content on this website (text, structure and visual identity) is the property of Bureau Point Fixe and is protected by applicable intellectual property law. Any reproduction, distribution or use without prior written permission is strictly prohibited."
+    },
+    {
+      "heading": "External Links",
+      "body": "This website may contain links to third-party platforms, such as LinkedIn. Bureau Point Fixe cannot be held responsible for the content or practices of those sites."
+    }
+  ]
+}

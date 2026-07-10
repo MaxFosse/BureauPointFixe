@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "label": "Contact",
+    "h1": "Start a confidential conversation."
+  },
+  "lead": "Briefly describe the decision, growth challenge or mandate you are weighing. Bureau Point Fixe will respond directly and discreetly.",
+  "form": {
+    "label_name": "Name",
+    "label_email": "Work email",
+    "label_org": "Organisation",
+    "label_message": "What are you trying to solve?",
+    "note": "Please do not include classified information, special-category personal data or other sensitive material in this form.",
+    "label_phone": "Phone",
+    "submit": "Send enquiry"
+  },
+  "aside": {
+    "label1": "Prefer email?",
+    "label2": "Discretion",
+    "discretion": "Enquiries are handled confidentially and answered by the principal, not a sales desk."
+  },
+  "email": "contact@bureaupointfixe.com"
+}
