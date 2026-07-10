@@ -30,10 +30,14 @@
   "governance": {
     "label": "Governance & compliance",
     "h2": "Credibility without overclaiming.",
-    "standing_label": "REGULATORY STANDING",
-    "standing_title": "CNAPS management approval held",
-    "standing_valid": "Valid until 16 June 2031.",
-    "p1": "Bureau Point Fixe is led by a holder of a valid management approval issued by the French National Council for Private Security Activities (CNAPS) for a training organisation operating in the private-security sector.",
-    "p2": "This individual approval is limited to the regulated capacity described above. It does not constitute approval, certification, recommendation or endorsement of Bureau Point Fixe, its advisory services or its clients by CNAPS."
+    "items": [
+      {
+        "standing_label": "REGULATORY STANDING",
+        "standing_title": "CNAPS management approval held",
+        "standing_valid": "Valid until 16 June 2031.",
+        "p1": "Bureau Point Fixe is led by a holder of a valid management approval issued by the French National Council for Private Security Activities (CNAPS) for a training organisation operating in the private-security sector.",
+        "p2": "This individual approval is limited to the regulated capacity described above. It does not constitute approval, certification, recommendation or endorsement of Bureau Point Fixe, its advisory services or its clients by CNAPS."
+      }
+    ]
   }
 }

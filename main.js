@@ -191,37 +191,19 @@ function renderAbout(d) {
   }
 
   const g = d.governance;
-  if (el('about-governance-label'))          el('about-governance-label').textContent          = g.label;
-  if (el('about-governance-h2'))             el('about-governance-h2').textContent             = g.h2;
-  if (el('about-governance-standing-label')) el('about-governance-standing-label').textContent = g.standing_label;
-  if (el('about-governance-standing-title')) el('about-governance-standing-title').textContent = g.standing_title;
-  if (el('about-governance-standing-valid')) el('about-governance-standing-valid').textContent = g.standing_valid;
-  if (el('about-governance-copy')) {
-    el('about-governance-copy').innerHTML = `<p>${g.p1}</p><p>${g.p2}</p>`;
-  }
-}
-
-function renderContact(d) {
-  const h = d.hero;
-  if (el('contact-hero-label')) el('contact-hero-label').textContent = h.label;
-  if (el('contact-hero-h1'))    el('contact-hero-h1').textContent    = h.h1;
-  if (el('contact-lead'))       el('contact-lead').textContent       = d.lead;
-
-  const f = d.form;
-  if (el('contact-label-name'))   el('contact-label-name').textContent   = f.label_name;
-  if (el('contact-label-email'))  el('contact-label-email').textContent  = f.label_email;
-  if (el('contact-label-org'))    el('contact-label-org').innerHTML      = `${f.label_org} <span class="opt">(optional)</span>`;
-  if (el('contact-label-message'))el('contact-label-message').textContent= f.label_message;
-  if (el('contact-note'))         el('contact-note').textContent         = f.note;
-  if (el('contact-label-phone'))  el('contact-label-phone').innerHTML    = `${f.label_phone} <span class="opt">(optional)</span>`;
-  if (el('contact-submit'))       el('contact-submit').textContent       = f.submit;
-
-  const a = d.aside;
-  if (el('contact-aside-label1'))    el('contact-aside-label1').textContent = a.label1;
-  if (el('contact-aside-label2'))    el('contact-aside-label2').textContent = a.label2;
-  if (el('contact-aside-discretion'))el('contact-aside-discretion').textContent = a.discretion;
-  if (el('contact-aside-email')) {
-    el('contact-aside-email').innerHTML = `Write directly to <a class="mail" href="mailto:${d.email}">${d.email}</a>.`;
+  if (el('about-governance-label')) el('about-governance-label').textContent = g.label;
+  if (el('about-governance-h2'))    el('about-governance-h2').textContent    = g.h2;
+  if (el('about-governance-items')) {
+    el('about-governance-items').innerHTML = g.items.map(item => `
+      <div class="governance-grid">
+        <div>
+          <div class="num">${item.standing_label}</div>
+          <h3 style="font-size:22px;line-height:1.15;margin:8px 0 0">${item.standing_title}</h3>
+          <p class="small stand">${item.standing_valid}</p>
+        </div>
+        <div class="governance-copy"><p>${item.p1}</p><p>${item.p2}</p></div>
+      </div>`
+    ).join('');
   }
 }
 
@@ -254,23 +236,24 @@ function renderPrivacy(d, email) {
   }
 }
 
+/* Adresse utilisée dans les pages légales (la page Contact n'est pas gérée par le CMS) */
+const CONTACT_EMAIL = 'contact@bureaupointfixe.com';
+
 /* Chargement de tous les fichiers en parallèle */
 Promise.all([
   fetch('content/home.json').then(r => r.json()),
   fetch('content/capabilities.json').then(r => r.json()),
   fetch('content/markets.json').then(r => r.json()),
   fetch('content/about.json').then(r => r.json()),
-  fetch('content/contact.json').then(r => r.json()),
   fetch('content/footer.json').then(r => r.json()),
   fetch('content/legal.json').then(r => r.json()),
   fetch('content/privacy.json').then(r => r.json()),
-]).then(([home, cap, markets, about, contact, footer, legal, privacy]) => {
+]).then(([home, cap, markets, about, footer, legal, privacy]) => {
   renderHome(home);
   renderCapabilities(cap);
   renderMarkets(markets);
   renderAbout(about);
-  renderContact(contact);
   renderFooterSocials(footer);
-  renderLegal(legal, contact.email);
-  renderPrivacy(privacy, contact.email);
+  renderLegal(legal, CONTACT_EMAIL);
+  renderPrivacy(privacy, CONTACT_EMAIL);
 }).catch(err => console.error('Erreur chargement contenu :', err));

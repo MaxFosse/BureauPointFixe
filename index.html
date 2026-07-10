@@ -256,14 +256,7 @@
           <div class="container">
             <div class="label" id="about-governance-label"></div>
             <h2 id="about-governance-h2"></h2>
-            <div class="governance-grid">
-              <div>
-                <div class="num" id="about-governance-standing-label"></div>
-                <h3 style="font-size:22px;line-height:1.15;margin:8px 0 0" id="about-governance-standing-title"></h3>
-                <p class="small stand" id="about-governance-standing-valid"></p>
-              </div>
-              <div class="governance-copy" id="about-governance-copy"></div>
-            </div>
+            <div id="about-governance-items"></div>
           </div>
         </div>
       </section>
@@ -273,30 +266,30 @@
         <div class="container chapter-mark"><span class="chapter-index">05 / 05</span><span class="chapter-rule"></span></div>
         <div class="container page-hero" style="grid-template-columns:1fr">
           <div>
-            <div class="label" id="contact-hero-label"></div>
-            <h1 id="contact-hero-h1"></h1>
+            <div class="label">Contact</div>
+            <h1>Start a confidential conversation.</h1>
           </div>
         </div>
         <div class="container contact-lead">
-          <p class="lead" id="contact-lead"></p>
+          <p class="lead">Briefly describe the decision, growth challenge or mandate you are weighing. Bureau Point Fixe will respond directly and discreetly.</p>
         </div>
 
         <div class="container form-grid">
           <form onsubmit="return false">
-            <div class="field"><label for="name" id="contact-label-name"></label><input id="name" name="name" type="text" autocomplete="name" required></div>
-            <div class="field"><label for="email" id="contact-label-email"></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="org" id="contact-label-org"></label><input id="org" name="org" type="text" autocomplete="organization"></div>
-            <div class="field"><label for="message" id="contact-label-message"></label><textarea id="message" name="message" required></textarea></div>
-            <p class="note" id="contact-note"></p>
-            <div class="field"><label for="phone" id="contact-label-phone"></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-            <div class="submit-row"><button class="btn primary" type="submit" id="contact-submit"></button></div>
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="org">Organisation <span class="opt">(optional)</span></label><input id="org" name="org" type="text" autocomplete="organization"></div>
+            <div class="field"><label for="message">What are you trying to solve?</label><textarea id="message" name="message" required></textarea></div>
+            <p class="note">Please do not include classified information, special-category personal data or other sensitive material in this form.</p>
+            <div class="field"><label for="phone">Phone <span class="opt">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="submit-row"><button class="btn primary" type="submit">Send enquiry</button></div>
             <p class="micro">Your information is used only to assess and respond to your enquiry and to manage any related pre-contractual exchange. Required fields are marked. See our <a href="#" onclick="event.preventDefault();document.getElementById('privacy-modal').classList.add('open')">Privacy Notice</a> for details about retention, recipients and your rights.</p>
           </form>
           <aside class="aside">
-            <div class="label" id="contact-aside-label1"></div>
-            <p id="contact-aside-email"></p>
-            <div class="label" id="contact-aside-label2"></div>
-            <p id="contact-aside-discretion"></p>
+            <div class="label">Prefer email?</div>
+            <p>Write directly to <a class="mail" href="mailto:contact@bureaupointfixe.com">contact@bureaupointfixe.com</a>.</p>
+            <div class="label">Discretion</div>
+            <p>Enquiries are handled confidentially and answered by the principal, not a sales desk.</p>
           </aside>
         </div>
       </section>

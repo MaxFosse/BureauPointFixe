@@ -311,93 +311,30 @@ collections:
               - name: h2
                 label: "Titre de la section"
                 widget: string
-              - name: standing_label
-                label: "Étiquette (ex : REGULATORY STANDING)"
-                widget: string
-              - name: standing_title
-                label: "Titre de l'agrément"
-                widget: string
-              - name: standing_valid
-                label: "Date de validité"
-                widget: string
-              - name: p1
-                label: "Premier paragraphe"
-                widget: text
-              - name: p2
-                label: "Deuxième paragraphe"
-                widget: text
-
-  # ══════════════════════════════════════════
-  #  CONTACT
-  # ══════════════════════════════════════════
-  - name: contact
-    label: "📩 Contact"
-    files:
-      - name: contact
-        label: "Page Contact"
-        file: content/contact.json
-        fields:
-
-          - name: hero
-            label: "En-tête de la page"
-            widget: object
-            fields:
-              - name: label
-                label: "Petite ligne au-dessus du titre"
-                widget: string
-              - name: h1
-                label: "Titre principal"
-                widget: string
-
-          - name: lead
-            label: "Texte d'accroche"
-            widget: text
-
-          - name: form
-            label: "Formulaire"
-            widget: object
-            hint: "⚠️ Les libellés du formulaire uniquement. Le comportement du formulaire n'est pas modifiable ici."
-            fields:
-              - name: label_name
-                label: "Libellé champ Nom"
-                widget: string
-              - name: label_email
-                label: "Libellé champ Email"
-                widget: string
-              - name: label_org
-                label: "Libellé champ Organisation"
-                widget: string
-              - name: label_message
-                label: "Libellé champ Message"
-                widget: string
-              - name: note
-                label: "Note sous le champ message"
-                widget: text
-              - name: label_phone
-                label: "Libellé champ Téléphone"
-                widget: string
-              - name: submit
-                label: "Texte du bouton d'envoi"
-                widget: string
-
-          - name: aside
-            label: "Encart latéral"
-            widget: object
-            fields:
-              - name: label1
-                label: "Titre 'Prefer email ?'"
-                widget: string
-              - name: label2
-                label: "Titre 'Discretion'"
-                widget: string
-              - name: discretion
-                label: "Texte sous 'Discretion'"
-                widget: text
-
-          - name: email
-            label: "Adresse email de contact"
-            widget: string
-            hint: "Utilisée dans l'encart Contact et dans les pages légales."
+              - name: items
+                label: "Agréments / mentions de conformité"
+                widget: list
+                allow_add: true
+                allow_delete: true
+                label_singular: Agrément
+                summary: "{{fields.standing_title}}"
+                hint: "Chaque élément ajouté apparaît séparé du précédent par une ligne, comme le bloc CNAPS existant."
+                fields:
+                  - name: standing_label
+                    label: "Étiquette (ex : REGULATORY STANDING)"
+                    widget: string
+                  - name: standing_title
+                    label: "Titre de l'agrément"
+                    widget: string
+                  - name: standing_valid
+                    label: "Date de validité"
+                    widget: string
+                  - name: p1
+                    label: "Premier paragraphe"
+                    widget: text
+                  - name: p2
+                    label: "Deuxième paragraphe"
+                    widget: text
 
   # ══════════════════════════════════════════
   #  FOOTER (réseaux sociaux uniquement)
