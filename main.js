@@ -32,7 +32,74 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 });
 
-// ── RAIL (ACTIVE SECTION) 
+// ── FORMULAIRE DE CONTACT (EmailJS) ───────────────────────────────────────────
+(function () {
+  const EMAILJS_PUBLIC_KEY  = '2CIlXEWf0-EsFfMgV';
+  const EMAILJS_SERVICE_ID  = 'service_rr46wbg';
+  const EMAILJS_TEMPLATE_ID = 'template_njcl7po';
+
+  const form     = document.getElementById('contact-form');
+  if (!form) return;
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  const btn      = form.querySelector('.form-submit-btn');
+  const label    = form.querySelector('.form-submit-label');
+  const feedback = document.getElementById('form-feedback');
+
+  function setFeedback(msg, type) {
+    feedback.textContent = msg;
+    feedback.className   = 'form-feedback form-feedback--' + type;
+    feedback.hidden      = false;
+  }
+
+  function setLoading(on) {
+    btn.disabled = on;
+    label.textContent = on ? 'Sending...' : 'Send enquiry';
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name    = form.querySelector('#name').value.trim();
+    const email   = form.querySelector('#email').value.trim();
+    const org     = form.querySelector('#org').value.trim();
+    const message = form.querySelector('#message').value.trim();
+    const phone   = form.querySelector('#phone').value.trim();
+
+    if (!name || !email || !message) {
+      setFeedback('Please fill in your name, work email and message.', 'err');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setFeedback('Please enter a valid email address.', 'err');
+      return;
+    }
+
+    setLoading(true);
+    feedback.hidden = true;
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name: name,
+        email: email,
+        organisation: org,
+        phone: phone,
+        message: message,
+      });
+
+      form.reset();
+      setFeedback('Enquiry sent. Bureau Point Fixe will respond directly and discreetly.', 'ok');
+
+    } catch (_) {
+      setFeedback('Network unavailable. Please try again or write directly to contact@bureaupointfixe.com.', 'err');
+    } finally {
+      setLoading(false);
+    }
+  });
+})();
+
+// ── RAIL (ACTIVE SECTION)
 (function () {
   const railLinks = Array.from(document.querySelectorAll('.rail-list a'));
   if (!railLinks.length) return;

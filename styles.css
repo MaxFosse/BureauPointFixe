@@ -765,7 +765,17 @@ form{
   max-width:600px
 }
 
-.submit-row{margin-top:2px}
+.submit-row{margin-top:2px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+
+.form-feedback{
+  font:600 13px var(--mono);
+  letter-spacing:.02em;
+  padding:10px 14px;
+  border-left:2px solid var(--ink);
+  background:var(--white);
+}
+.form-feedback--ok{border-left-color:var(--ink);color:var(--ink)}
+.form-feedback--err{border-left-color:var(--point-dark);color:var(--point-dark);background:rgba(178,71,50,.05)}
 
 .micro{
   font-size:13px;
