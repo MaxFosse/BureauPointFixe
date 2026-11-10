@@ -1,3 +1,6 @@
+// ── ANNÉE PIED DE PAGE ────────────────────────────────────────────────────────
+document.querySelectorAll('[data-annee]').forEach(span => { span.textContent = new Date().getFullYear(); });
+
 // ── MENU HAMBURGER MOBILE
 document.addEventListener('DOMContentLoaded', () => {
   const burger      = document.querySelector('.nav-burger');
